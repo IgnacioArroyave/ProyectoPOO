@@ -1,0 +1,10 @@
+C:\Users\Ignac\source\repos\2022POOP1\2022POOP1\bin\Debug\2022POOP1.exe.config
+C:\Users\Ignac\source\repos\2022POOP1\2022POOP1\bin\Debug\2022POOP1.exe
+C:\Users\Ignac\source\repos\2022POOP1\2022POOP1\bin\Debug\2022POOP1.pdb
+C:\Users\Ignac\source\repos\2022POOP1\2022POOP1\obj\Debug\2022POOP1.csprojAssemblyReference.cache
+C:\Users\Ignac\source\repos\2022POOP1\2022POOP1\obj\Debug\_2022POOP1.Form1.resources
+C:\Users\Ignac\source\repos\2022POOP1\2022POOP1\obj\Debug\_2022POOP1.Properties.Resources.resources
+C:\Users\Ignac\source\repos\2022POOP1\2022POOP1\obj\Debug\2022POOP1.csproj.GenerateResource.cache
+C:\Users\Ignac\source\repos\2022POOP1\2022POOP1\obj\Debug\2022POOP1.csproj.CoreCompileInputs.cache
+C:\Users\Ignac\source\repos\2022POOP1\2022POOP1\obj\Debug\2022POOP1.exe
+C:\Users\Ignac\source\repos\2022POOP1\2022POOP1\obj\Debug\2022POOP1.pdb
