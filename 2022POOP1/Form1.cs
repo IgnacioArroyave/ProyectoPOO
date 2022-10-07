@@ -15,9 +15,57 @@ namespace _2022POOP1
         public Form1()
         {
             InitializeComponent();
+            fabricantes.Add("Apple");
+            fabricantes.Add("Pepsi");
+            fabricantes.Add("CocaCola");
+            fabricantes.Add("P&G");
+            fabricantes.Add("Microsoft");
+            fabricantes.Add("Sony");
+            fabricantes.Add("Nestle");
+
+            listBox1.Items.Clear();
+            listBox2.Items.Clear();
+            listBox3.Items.Clear();
+            listBox4.Items.Clear();
+            listBox5.Items.Clear();
+
+            foreach(string marca in fabricantes)
+            {
+                listBox1.Items.Add(marca);
+                listBox2.Items.Add(marca);
+                listBox3.Items.Add(marca);
+                listBox4.Items.Add(marca);
+                listBox5.Items.Add(marca);
+            }
+
+
+            productosApple.Add("Iphone13");
+            productosApple.Add("Iphone12");
+            productosApple.Add("Iphone11");
+            productosApple.Add("Iphone10");
+            productosApple.Add("Ipad");
+
+            productosPepsi.Add("Pepsi3L");
+            productosPepsi.Add("Pepsi2L");
+            productosPepsi.Add("Pepsi1.5L");
+
+            productosCoca.Add("CocaCola3L");
+            productosCoca.Add("Cocacola2L");
+            productosCoca.Add("Cocacola1.5L");
+
+            productosSony.Add("PS5");
+            productosSony.Add("PS4");
+            productosSony.Add("JUEGO PS5");
+            productosSony.Add("JUEGOPS4");
+            productosSony.Add("PS5");
+
         }
-        
-        
+        List<string> fabricantes = new List<string>();
+        List<string> productosApple = new List<string>();
+        List<string> productosPepsi = new List<string>();
+        List<string> productosCoca = new List<string>();
+        List<string> productosSony = new List<string>();
+
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -158,94 +206,9 @@ namespace _2022POOP1
                 }
             }
             
-            List<string> fabricantes = new List<string>();
-            fabricantes.Add("Apple");
-            fabricantes.Add("Pepsi");
-            fabricantes.Add("CocaCola");
-            fabricantes.Add("P&G");
-            fabricantes.Add("Microsoft");
-            fabricantes.Add("Sony");
-            fabricantes.Add("Nestle");
-            listBox1.DataSource = fabricantes;
-            listBox2.DataSource = fabricantes;
-            listBox3.DataSource = fabricantes;
-            listBox4.DataSource = fabricantes;
-            listBox5.DataSource = fabricantes;
-            string item = listBox1.Items[listBox1.SelectedIndex].ToString();
-
-            List<string> productosApple = new List<string>();
-            productosApple.Add("Iphone13");
-            productosApple.Add("Iphone12");
-            productosApple.Add("Iphone11");
-            productosApple.Add("Iphone10");
-            productosApple.Add("Ipad");
-            List<string> productosPepsi = new List<string>();
-            productosPepsi.Add("Pepsi3L");
-            productosPepsi.Add("Pepsi2L");
-            productosPepsi.Add("Pepsi1.5L");
-            List<string> productosCoca = new List<string>();
-            productosCoca.Add("CocaCola3L");
-            productosCoca.Add("Cocacola2L");
-            productosCoca.Add("Cocacola1.5L");
-            List<string> productosSony = new List<string>();
-            productosSony.Add("PS5");
-            productosSony.Add("PS4");
-            productosSony.Add("JUEGO PS5");
-            productosSony.Add("JUEGOPS4");
-            productosSony.Add("PS5");
-
-            if (listBox1.SelectedItems.Contains("Apple"))
-            {
-                listBox10.DataSource = productosApple;
-
-            }
-           
-            if (listBox2.SelectedItems.Contains("Apple"))
-            {
-                listBox9.DataSource = productosApple;
-
-            }
-            if (listBox3.SelectedItems.Contains("Apple"))
-            {
-                listBox8.DataSource = productosApple;
-
-            }
-            if (listBox4.SelectedItems.Contains("Apple"))
-            {
-                listBox7.DataSource = productosApple;
-
-            }
-            if (listBox5.SelectedItems.Contains("Apple"))
-            {
-                listBox6.DataSource = productosApple;
-
-            }
-
-            if (listBox1.SelectedItems.Contains("Pepsi"))
-            {
-                listBox10.DataSource = productosPepsi;
-
-            }
-            if (listBox2.SelectedItems.Contains("Pepsi"))
-            {
-                listBox9.DataSource = productosPepsi;
-
-            }
-            if (listBox3.SelectedItems.Contains("Pepsi"))
-            {
-                listBox8.DataSource = productosPepsi;
-
-            }
-            if (listBox4.SelectedItems.Contains("Pepsi"))
-            {
-                listBox7.DataSource = productosPepsi;
-
-            }
-            if (listBox5.SelectedItems.Contains("Pepsi"))
-            {
-                listBox6.DataSource = productosPepsi;
-
-            }
+            
+            
+            
 
 
 
@@ -298,10 +261,33 @@ namespace _2022POOP1
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {   
+        {
             //string item =listBox1.Items[listBox1.SelectedIndex].ToString();
+            switch (listBox1.Items[listBox1.SelectedIndex])
+            {
+                case "Apple":
+                    listBox10.Items.Clear();
+                    foreach (string producto in productosApple)
+                        listBox10.Items.Add(producto);
+                    break;
+                case "Pepsi":
+                    listBox10.Items.Clear();
+                    foreach (string producto in productosPepsi)
+                        listBox10.Items.Add(producto);
+                    break;
+                case "CocaCola":
+                    listBox10.Items.Clear();
+                    foreach (string producto in productosCoca)
+                        listBox10.Items.Add(producto);
+                    break;
+                case "Sony":
+                    listBox10.Items.Clear();
+                    foreach (string producto in productosSony)
+                        listBox10.Items.Add(producto);
+                    break;
+            }
             
-           
+
         }
 
         private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
@@ -313,6 +299,114 @@ namespace _2022POOP1
         {
             //if (comboBox3.SelectedIndex == comboBox3.FindStringExact("Apple"))
           
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (listBox2.Items[listBox2.SelectedIndex])
+            {
+                case "Apple":
+                    listBox9.Items.Clear();
+                    foreach (string producto in productosApple)
+                        listBox9.Items.Add(producto);
+                    break;
+                case "Pepsi":
+                    listBox9.Items.Clear();
+                    foreach (string producto in productosPepsi)
+                        listBox9.Items.Add(producto);
+                    break;
+                case "CocaCola":
+                    listBox9.Items.Clear();
+                    foreach (string producto in productosCoca)
+                        listBox9.Items.Add(producto);
+                    break;
+                case "Sony":
+                    listBox9.Items.Clear();
+                    foreach (string producto in productosSony)
+                        listBox9.Items.Add(producto);
+                    break;
+            }
+        }
+
+        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (listBox3.Items[listBox3.SelectedIndex])
+            {
+                case "Apple":
+                    listBox8.Items.Clear();
+                    foreach (string producto in productosApple)
+                        listBox8.Items.Add(producto);
+                    break;
+                case "Pepsi":
+                    listBox8.Items.Clear();
+                    foreach (string producto in productosPepsi)
+                        listBox8.Items.Add(producto);
+                    break;
+                case "CocaCola":
+                    listBox8.Items.Clear();
+                    foreach (string producto in productosCoca)
+                        listBox8.Items.Add(producto);
+                    break;
+                case "Sony":
+                    listBox8.Items.Clear();
+                    foreach (string producto in productosSony)
+                        listBox8.Items.Add(producto);
+                    break;
+            }
+        }
+
+        private void listBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (listBox4.Items[listBox4.SelectedIndex])
+            {
+                case "Apple":
+                    listBox7.Items.Clear();
+                    foreach (string producto in productosApple)
+                        listBox7.Items.Add(producto);
+                    break;
+                case "Pepsi":
+                    listBox7.Items.Clear();
+                    foreach (string producto in productosPepsi)
+                        listBox7.Items.Add(producto);
+                    break;
+                case "CocaCola":
+                    listBox7.Items.Clear();
+                    foreach (string producto in productosCoca)
+                        listBox7.Items.Add(producto);
+                    break;
+                case "Sony":
+                    listBox7.Items.Clear();
+                    foreach (string producto in productosSony)
+                        listBox7.Items.Add(producto);
+                    break;
+            }
+        }
+
+        private void listBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (listBox5.Items[listBox5.SelectedIndex])
+            {
+                case "Apple":
+                    listBox6.Items.Clear();
+                    foreach (string producto in productosApple)
+                        listBox6.Items.Add(producto);
+                    break;
+                case "Pepsi":
+                    listBox6.Items.Clear();
+                    foreach (string producto in productosPepsi)
+                        listBox6.Items.Add(producto);
+                    break;
+                case "CocaCola":
+                    listBox6.Items.Clear();
+                    foreach (string producto in productosCoca)
+                        listBox6.Items.Add(producto);
+                    break;
+                case "Sony":
+                    listBox6.Items.Clear();
+                    foreach (string producto in productosSony)
+                        listBox6.Items.Add(producto);
+                    break;
+            }
         }
     }
 }

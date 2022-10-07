@@ -487,6 +487,7 @@
             this.listBox2.Sorted = true;
             this.listBox2.TabIndex = 52;
             this.listBox2.Visible = false;
+            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // listBox3
             // 
@@ -499,6 +500,7 @@
             this.listBox3.Sorted = true;
             this.listBox3.TabIndex = 53;
             this.listBox3.Visible = false;
+            this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
             // 
             // listBox4
             // 
@@ -511,6 +513,7 @@
             this.listBox4.Sorted = true;
             this.listBox4.TabIndex = 54;
             this.listBox4.Visible = false;
+            this.listBox4.SelectedIndexChanged += new System.EventHandler(this.listBox4_SelectedIndexChanged);
             // 
             // listBox5
             // 
@@ -523,6 +526,7 @@
             this.listBox5.Sorted = true;
             this.listBox5.TabIndex = 55;
             this.listBox5.Visible = false;
+            this.listBox5.SelectedIndexChanged += new System.EventHandler(this.listBox5_SelectedIndexChanged);
             // 
             // listBox6
             // 
