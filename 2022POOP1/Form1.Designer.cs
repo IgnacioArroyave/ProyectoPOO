@@ -535,7 +535,7 @@
             this.listBox6.ItemHeight = 16;
             this.listBox6.Location = new System.Drawing.Point(463, 239);
             this.listBox6.Name = "listBox6";
-            this.listBox6.Size = new System.Drawing.Size(120, 36);
+            this.listBox6.Size = new System.Drawing.Size(177, 36);
             this.listBox6.Sorted = true;
             this.listBox6.TabIndex = 60;
             this.listBox6.Visible = false;
@@ -547,7 +547,7 @@
             this.listBox7.ItemHeight = 16;
             this.listBox7.Location = new System.Drawing.Point(463, 197);
             this.listBox7.Name = "listBox7";
-            this.listBox7.Size = new System.Drawing.Size(120, 36);
+            this.listBox7.Size = new System.Drawing.Size(177, 36);
             this.listBox7.Sorted = true;
             this.listBox7.TabIndex = 59;
             this.listBox7.Visible = false;
@@ -559,7 +559,7 @@
             this.listBox8.ItemHeight = 16;
             this.listBox8.Location = new System.Drawing.Point(463, 157);
             this.listBox8.Name = "listBox8";
-            this.listBox8.Size = new System.Drawing.Size(120, 36);
+            this.listBox8.Size = new System.Drawing.Size(177, 36);
             this.listBox8.Sorted = true;
             this.listBox8.TabIndex = 58;
             this.listBox8.Visible = false;
@@ -571,7 +571,7 @@
             this.listBox9.ItemHeight = 16;
             this.listBox9.Location = new System.Drawing.Point(463, 115);
             this.listBox9.Name = "listBox9";
-            this.listBox9.Size = new System.Drawing.Size(120, 36);
+            this.listBox9.Size = new System.Drawing.Size(177, 36);
             this.listBox9.Sorted = true;
             this.listBox9.TabIndex = 57;
             this.listBox9.Visible = false;
@@ -583,7 +583,7 @@
             this.listBox10.ItemHeight = 16;
             this.listBox10.Location = new System.Drawing.Point(463, 75);
             this.listBox10.Name = "listBox10";
-            this.listBox10.Size = new System.Drawing.Size(120, 36);
+            this.listBox10.Size = new System.Drawing.Size(177, 36);
             this.listBox10.Sorted = true;
             this.listBox10.TabIndex = 56;
             this.listBox10.Visible = false;
