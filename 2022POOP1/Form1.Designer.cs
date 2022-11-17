@@ -78,6 +78,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.MintCream;
             this.label1.Location = new System.Drawing.Point(472, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 17);
@@ -88,17 +89,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.MintCream;
             this.label2.Location = new System.Drawing.Point(881, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(128, 34);
             this.label2.TabIndex = 1;
             this.label2.Text = "Huella de carbono \r\n(usuario)\r\n";
             this.label2.Visible = false;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.MintCream;
             this.label3.Location = new System.Drawing.Point(334, 47);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 17);
@@ -108,6 +110,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.BackColor = System.Drawing.Color.MintCream;
             this.textBox3.Location = new System.Drawing.Point(884, 89);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
@@ -117,12 +120,13 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.MintCream;
             this.button1.Location = new System.Drawing.Point(884, 134);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 51);
             this.button1.TabIndex = 9;
             this.button1.Text = "Calcular\r\n(usuario)";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -173,7 +177,6 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(111, 24);
             this.toolStripMenuItem1.Text = "Combustibles";
             this.toolStripMenuItem1.Visible = false;
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // dieselToolStripMenuItem1
             // 
@@ -184,6 +187,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.MintCream;
             this.label5.Location = new System.Drawing.Point(12, 47);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(210, 34);
@@ -193,38 +197,41 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
+            this.radioButton1.BackColor = System.Drawing.Color.MintCream;
             this.radioButton1.Location = new System.Drawing.Point(15, 90);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(216, 21);
             this.radioButton1.TabIndex = 13;
             this.radioButton1.Text = "Calcular mi huella de carbono";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.UseVisualStyleBackColor = false;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
+            this.radioButton2.BackColor = System.Drawing.Color.MintCream;
             this.radioButton2.Location = new System.Drawing.Point(15, 117);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(184, 21);
             this.radioButton2.TabIndex = 14;
             this.radioButton2.Text = "Comparar mis consumos";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.radioButton2.UseVisualStyleBackColor = false;
             // 
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
+            this.radioButton3.BackColor = System.Drawing.Color.MintCream;
             this.radioButton3.Location = new System.Drawing.Point(15, 144);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(248, 21);
             this.radioButton3.TabIndex = 15;
             this.radioButton3.Text = "Ver huella de carbono de empresa";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.UseVisualStyleBackColor = false;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.MintCream;
             this.label6.Location = new System.Drawing.Point(12, 188);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(249, 17);
@@ -248,6 +255,7 @@
             // 
             // numericUpDown1
             // 
+            this.numericUpDown1.BackColor = System.Drawing.Color.MintCream;
             this.numericUpDown1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.numericUpDown1.Location = new System.Drawing.Point(15, 208);
             this.numericUpDown1.Maximum = new decimal(new int[] {
@@ -259,7 +267,7 @@
             this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
             this.numericUpDown1.TabIndex = 20;
             this.numericUpDown1.Visible = false;
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+
             // 
             // button4
             // 
@@ -273,21 +281,23 @@
             this.button4.Text = "limpiar";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Visible = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.Color.MintCream;
             this.button5.Location = new System.Drawing.Point(1016, 134);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(90, 51);
             this.button5.TabIndex = 35;
             this.button5.Text = "Calcular\r\n(compañia)";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Visible = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+
             // 
             // textBox13
             // 
+            this.textBox13.BackColor = System.Drawing.Color.MintCream;
             this.textBox13.Location = new System.Drawing.Point(1016, 89);
             this.textBox13.Name = "textBox13";
             this.textBox13.ReadOnly = true;
@@ -298,6 +308,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.MintCream;
             this.label7.Location = new System.Drawing.Point(1015, 47);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(128, 34);
@@ -308,6 +319,7 @@
             // listBox1
             // 
             this.listBox1.AllowDrop = true;
+            this.listBox1.BackColor = System.Drawing.Color.MintCream;
             this.listBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.listBox1.ItemHeight = 16;
             this.listBox1.Location = new System.Drawing.Point(337, 75);
@@ -320,6 +332,7 @@
             // 
             // comboBox6
             // 
+            this.comboBox6.BackColor = System.Drawing.Color.MintCream;
             this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Location = new System.Drawing.Point(1028, 209);
@@ -327,10 +340,11 @@
             this.comboBox6.Size = new System.Drawing.Size(121, 24);
             this.comboBox6.TabIndex = 44;
             this.comboBox6.Visible = false;
-            this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
+
             // 
             // comboBox7
             // 
+            this.comboBox7.BackColor = System.Drawing.Color.MintCream;
             this.comboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox7.FormattingEnabled = true;
             this.comboBox7.Location = new System.Drawing.Point(1028, 239);
@@ -455,6 +469,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.BackColor = System.Drawing.Color.MintCream;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(873, 209);
@@ -463,10 +478,11 @@
             this.comboBox1.Sorted = true;
             this.comboBox1.TabIndex = 39;
             this.comboBox1.Visible = false;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+
             // 
             // comboBox2
             // 
+            this.comboBox2.BackColor = System.Drawing.Color.MintCream;
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(873, 239);
@@ -479,6 +495,7 @@
             // listBox2
             // 
             this.listBox2.AllowDrop = true;
+            this.listBox2.BackColor = System.Drawing.Color.MintCream;
             this.listBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.listBox2.ItemHeight = 16;
             this.listBox2.Location = new System.Drawing.Point(337, 115);
@@ -492,6 +509,7 @@
             // listBox3
             // 
             this.listBox3.AllowDrop = true;
+            this.listBox3.BackColor = System.Drawing.Color.MintCream;
             this.listBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.listBox3.ItemHeight = 16;
             this.listBox3.Location = new System.Drawing.Point(337, 157);
@@ -505,6 +523,7 @@
             // listBox4
             // 
             this.listBox4.AllowDrop = true;
+            this.listBox4.BackColor = System.Drawing.Color.MintCream;
             this.listBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.listBox4.ItemHeight = 16;
             this.listBox4.Location = new System.Drawing.Point(337, 197);
@@ -518,6 +537,7 @@
             // listBox5
             // 
             this.listBox5.AllowDrop = true;
+            this.listBox5.BackColor = System.Drawing.Color.MintCream;
             this.listBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.listBox5.ItemHeight = 16;
             this.listBox5.Location = new System.Drawing.Point(337, 239);
@@ -531,6 +551,7 @@
             // listBox6
             // 
             this.listBox6.AllowDrop = true;
+            this.listBox6.BackColor = System.Drawing.Color.MintCream;
             this.listBox6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.listBox6.ItemHeight = 16;
             this.listBox6.Location = new System.Drawing.Point(463, 239);
@@ -543,6 +564,7 @@
             // listBox7
             // 
             this.listBox7.AllowDrop = true;
+            this.listBox7.BackColor = System.Drawing.Color.MintCream;
             this.listBox7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.listBox7.ItemHeight = 16;
             this.listBox7.Location = new System.Drawing.Point(463, 197);
@@ -555,6 +577,7 @@
             // listBox8
             // 
             this.listBox8.AllowDrop = true;
+            this.listBox8.BackColor = System.Drawing.Color.MintCream;
             this.listBox8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.listBox8.ItemHeight = 16;
             this.listBox8.Location = new System.Drawing.Point(463, 157);
@@ -567,6 +590,7 @@
             // listBox9
             // 
             this.listBox9.AllowDrop = true;
+            this.listBox9.BackColor = System.Drawing.Color.MintCream;
             this.listBox9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.listBox9.ItemHeight = 16;
             this.listBox9.Location = new System.Drawing.Point(463, 115);
@@ -579,6 +603,7 @@
             // listBox10
             // 
             this.listBox10.AllowDrop = true;
+            this.listBox10.BackColor = System.Drawing.Color.MintCream;
             this.listBox10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.listBox10.ItemHeight = 16;
             this.listBox10.Location = new System.Drawing.Point(463, 75);
@@ -593,6 +618,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.YellowGreen;
+            this.BackgroundImage = global::_2022POOP1.Properties.Resources.WhatsApp_Image_2021_05_16_at_7_55_52_PM;
             this.ClientSize = new System.Drawing.Size(1160, 440);
             this.Controls.Add(this.listBox6);
             this.Controls.Add(this.listBox7);
@@ -633,7 +659,8 @@
             this.Controls.Add(this.comboBox1);
             this.Name = "Form1";
             this.Text = "Huellas de carbono";
-            this.Load += new System.EventHandler(this.Form1_Load);
+
+
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();

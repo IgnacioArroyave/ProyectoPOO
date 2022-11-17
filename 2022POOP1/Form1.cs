@@ -15,52 +15,6 @@ namespace _2022POOP1
         public Form1()
         {
             InitializeComponent();
-            fabricantes.Add("Apple");
-            fabricantes.Add("Pepsi");
-            fabricantes.Add("CocaCola");
-            fabricantes.Add("PG");
-            fabricantes.Add("Microsoft");
-            fabricantes.Add("Sony");
-            fabricantes.Add("Nestle");
-
-            factores.Add("Apple", 22.5f);
-            factores.Add("Microsoft", 13.8f);
-            factores.Add("Nestle", 113.5f);
-            factores.Add("Sony", 18.47f);
-            factores.Add("PG", 2.4f);
-            factores.Add("Pepsi", 63.1f);
-            factores.Add("Coca", 5.17f);
-
-            EAPPLE.Add("Iphone13",2.8f);
-            EAPPLE.Add("Iphone12", 3.15f);
-            EAPPLE.Add("Iphone11", 3.73f);
-            EAPPLE.Add("Iphone10", 5.15f);
-            EAPPLE.Add("Ipad", 6.67f);
-
-            EMICRO.Add("XBOX1", 1.23f);
-            EMICRO.Add("Surface laptop1", 0.152f);
-            EMICRO.Add("Surface laptop2", 0.130f);
-            EMICRO.Add("XBOX series S", 1.05f);
-            EMICRO.Add("XBOX series X", 1.12f);
-            EMICRO.Add("Lumia650", 0.36f);
-            EMICRO.Add("Lumia950", 0.52f);
-
-            EPEPSI.Add("Pepsi3L", 0.0525f);
-            EPEPSI.Add("Pepsi2L", 0.0350f);
-            EPEPSI.Add("Pepsi1.5L", 0.0215f);
-
-            ECOCA.Add("Cocacola3L", 0.0525f);
-            ECOCA.Add("Cocacola2L", 0.0350f);
-            ECOCA.Add("Cocacola1.5L", 0.0215f);
-
-            ESONY.Add("PS4", 1.22f);
-            ESONY.Add("PS5", 1.10f);
-            ESONY.Add("JUEGO PS4", 0.002f);
-            ESONY.Add("JUEGO PS5", 0.001f);
-            ESONY.Add("XM4", 0.92f);
-
-
-
 
 
             listBox1.Items.Clear();
@@ -69,65 +23,53 @@ namespace _2022POOP1
             listBox4.Items.Clear();
             listBox5.Items.Clear();
 
-            
+            productosApple.Add(new producto("Iphone13", 2.8f));
+            productosApple.Add(new producto("Iphone12", 3.15f));
+            productosApple.Add(new producto ("Iphone11", 3.73f));
+            productosApple.Add(new producto ("Iphone10", 5.15f));
+            productosApple.Add(new producto ("Ipad", 6.67f));
+
+            productosPepsi.Add(new producto("Pepsi3L",0.0525f));
+            productosPepsi.Add(new producto("Pepsi2L",0.0350f));
+            productosPepsi.Add(new producto("Pepsi1.5L",0.0215f));
+
+            productosCoca.Add(new producto ("Cocacola3L", 0.0525f));
+            productosCoca.Add(new producto ("Cocacola2L", 0.0350f));
+            productosCoca.Add(new producto ("Cocacola1.5L", 0.0215f));
 
 
-            foreach (string marca in fabricantes)
-            {
-                listBox1.Items.Add(marca);
-                listBox2.Items.Add(marca);
-                listBox3.Items.Add(marca);
-                listBox4.Items.Add(marca);
-                listBox5.Items.Add(marca);
-            }
+            productosSony.Add(new producto("PS4", 1.22f));
+            productosSony.Add(new producto("PS5", 1.10f));
+            productosSony.Add(new producto("JUEGO PS4", 0.002f));
+            productosSony.Add(new producto("JUEGO PS5", 0.001f));
+            productosSony.Add(new producto("XM4", 0.92f));
 
-            //Allan Paniagua
-            productosApple.Add("Iphone13");
-            productosApple.Add("Iphone12");
-            productosApple.Add("Iphone11");
-            productosApple.Add("Iphone10");
-            productosApple.Add("Ipad");
+            productosMicrosoft.Add(new producto("XBOX1", 1.23f));           
+            productosMicrosoft.Add(new producto("Surface laptop1", 0.152f));
+            productosMicrosoft.Add(new producto("Surface laptop2", 0.130f));
+            productosMicrosoft.Add(new producto("XBOX series S", 1.05f));
+            productosMicrosoft.Add(new producto("XBOX series X", 1.12f));
+            productosMicrosoft.Add(new producto("Lumia650", 0.36f));
+            productosMicrosoft.Add(new producto("Lumia950", 0.52f));
 
-            productosPepsi.Add("Pepsi3L");
-            productosPepsi.Add("Pepsi2L");
-            productosPepsi.Add("Pepsi1.5L");
+            productosNestle.Add(new producto("Milo 400g",0.0125f));
+            productosNestle.Add(new producto("Milo 800g", 0.0225f));
+            productosNestle.Add(new producto("Barra Crunch 90g",0.0098f));
+            productosNestle.Add(new producto("Barra Crunch 150g",0.0105f));
+            productosNestle.Add(new producto("Cerelac 400g",0.0132f));
+            productosNestle.Add(new producto("Cerelac 800g",0.0224f));
+            productosNestle.Add(new producto("Nescafe 200g", 0.0085f));
+            productosNestle.Add(new producto("Nescafe 400g",0.0170f));
 
-            productosCoca.Add("Cocacola3L");
-            productosCoca.Add("Cocacola2L");
-            productosCoca.Add("Cocacola1.5L");
-
-            productosSony.Add("PS5");
-            productosSony.Add("PS4");
-            productosSony.Add("JUEGO PS5");
-            productosSony.Add("JUEGOPS4");
-            productosSony.Add("SONY XM4");
-
-            productosMicrosoft.Add("XBOX1");
-            productosMicrosoft.Add("Surface laptop1");
-            productosMicrosoft.Add("Surface laptopt2");
-            productosMicrosoft.Add("XBOX series S");
-            productosMicrosoft.Add("XBOX series X");
-            productosMicrosoft.Add("Lumia650");
-            productosMicrosoft.Add("Lumia950");
-
-            productosNestle.Add("Milo 400g");
-            productosNestle.Add("Milo 800g");
-            productosNestle.Add("Barra Crunch 90g");
-            productosNestle.Add("Barra Crunch 150g");
-            productosNestle.Add("Cerelac 400g");
-            productosNestle.Add("Cerelac 800g");
-            productosNestle.Add("Nescafe 200g");
-            productosNestle.Add("Nescafe 400g");
-
-            productosPG.Add("Pantene 500g");
-            productosPG.Add("Pantene 250g");
-            productosPG.Add("Tidepods 500g");
-            productosPG.Add("OralB 200g");
-            productosPG.Add("OralB 50g");
-            productosPG.Add("Losion Lacoste 500mg");
-            productosPG.Add("Losion Lacoste 250mg");
-            productosPG.Add("Vicks vaporub 50ml");
-            productosPG.Add("Vicks vaporub 100ml");
+            productosPG.Add(new producto("Pantene 500g",0.0175f));
+            productosPG.Add(new producto("Pantene 250g", 0.0110f));
+            productosPG.Add(new producto("Tidepods 500g",0.0132f));
+            productosPG.Add(new producto("OralB 200g",0.0078f));
+            productosPG.Add(new producto("OralB 50g",0.0035f));
+            productosPG.Add(new producto("Losion Lacoste 500mg",0.0116f));
+            productosPG.Add(new producto("Losion Lacoste 250mg",0.0089f));
+            productosPG.Add(new producto("Vicks vaporub 50ml",0.0025f));
+            productosPG.Add(new producto("Vicks vaporub 100ml",0.0075f));
             //
             faber.Add(listBox1);
             faber.Add(listBox2);
@@ -140,52 +82,38 @@ namespace _2022POOP1
             remolino.Add(listBox8);
             remolino.Add(listBox7);
             remolino.Add(listBox6);
-            
+
+            fabricantes.Add(new fabricante(22.5f, "Apple", productosApple));
+            fabricantes.Add(new fabricante(13.8f, "Microsoft", productosMicrosoft));
+            fabricantes.Add(new fabricante(113.5f, "Nestle", productosNestle));
+            fabricantes.Add(new fabricante(18.47f, "Sony", productosSony));
+            fabricantes.Add(new fabricante(2.4f, "PG", productosPG));
+            fabricantes.Add(new fabricante(63.1f, "Pepsi", productosPepsi));
+            fabricantes.Add(new fabricante(5.17f, "CocaCola", productosCoca));
+
+            foreach (fabricante marca in fabricantes)
+            {
+                listBox1.Items.Add(marca.nombre);
+                listBox2.Items.Add(marca.nombre);
+                listBox3.Items.Add(marca.nombre);
+                listBox4.Items.Add(marca.nombre);
+                listBox5.Items.Add(marca.nombre);
+            }
         }
-        List<string> fabricantes = new List<string>();
-        List<string> productosApple = new List<string>();
-        List<string> productosPepsi = new List<string>();
-        List<string> productosCoca = new List<string>();
-        List<string> productosSony = new List<string>();
-        List<string> productosMicrosoft = new List<string>();
-        List<string> productosNestle = new List<string>();
-        List<string> productosPG = new List<string>();
+        List<fabricante> fabricantes = new List<fabricante>();
+        List<producto> productosApple = new List<producto>();
+        List<producto> productosPepsi = new List<producto>();
+        List<producto> productosCoca = new List<producto>();
+        List<producto> productosSony = new List<producto>();
+        List<producto> productosMicrosoft = new List<producto>();
+        List<producto> productosNestle = new List<producto>();
+        List<producto> productosPG = new List<producto>();
         List<ListBox> faber = new List<ListBox>();
         List<ListBox> remolino = new List<ListBox>();
-        Dictionary<string, float> factores = new Dictionary<string, float>();
-        Dictionary<string, float> EAPPLE = new Dictionary<string, float>();
-        Dictionary<string, float> EMICRO = new Dictionary<string, float>();
-        Dictionary<string, float> ESONY = new Dictionary<string, float>();
-        Dictionary<string, float> ENEST = new Dictionary<string, float>();
-        Dictionary<string, float> EPG = new Dictionary<string, float>();
-        Dictionary<string, float> ECOCA = new Dictionary<string, float>();
-        Dictionary<string, float> EPEPSI = new Dictionary<string, float>();
 
 
-        private void label2_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
@@ -319,85 +247,29 @@ namespace _2022POOP1
         private void button1_Click(object sender, EventArgs e)
         {
             float total = 0;
-            for (int i = 0; i < numericUpDown1.Value - 1; i++)
+            for (int i = 0; i < numericUpDown1.Value; i++)
             {
 
-
-                string fabricante = faber[i].Items[faber[i].SelectedIndex].ToString();
-                string producto = remolino[i].Items[remolino[i].SelectedIndex].ToString();
-
-
-                float factor = factores[fabricante];
-                float eficiencia = 0;
-
-                switch (fabricante)
+                if (faber[i].SelectedIndex == -1)
                 {
-                    case "Apple":
-                        eficiencia = EAPPLE[producto];
-                        break;
-
-                    case "Sony":
-                        eficiencia = ESONY[producto];
-                        break;
-
-                    case "Microsoft":
-                        eficiencia = EMICRO[producto];
-                        break;
-
-                    case "Nestle":
-                        eficiencia = ENEST[producto];
-                        break;
-
-                    case "PG":
-                        eficiencia = EPG[producto];
-                        break;
-
-                    case "Coca":
-                        eficiencia = ECOCA[producto];
-                        break;
-
-                    case "Pepsi":
-                        eficiencia = EPEPSI[producto];
-                        break;
+                    continue;
                 }
+                string nombre_fabricante = faber[i].Items[faber[i].SelectedIndex].ToString();
+                string nombre_producto = remolino[i].Items[remolino[i].SelectedIndex].ToString();
+
+                fabricante Fabricante = fabricantes[0];
+                foreach (fabricante fab in fabricantes)
+                {
+                    if (fab.nombre == nombre_fabricante)
+                        Fabricante = fab;
+                }
+
+                float factor = Fabricante.factor;
+                float eficiencia = Fabricante.getEficiencia(nombre_producto);
+
                 total += factor * eficiencia;
             }
             MessageBox.Show("su huella de carbono es:" + "\n" + total+"T/CO2");
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            
-            
-
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-          
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-            
-           
-        }
-
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -407,54 +279,44 @@ namespace _2022POOP1
             {
                 case "Apple":
                     listBox10.Items.Clear();
-                    foreach (string producto in productosApple)
-                        listBox10.Items.Add(producto);
+                    foreach (producto prod in productosApple)
+                        listBox10.Items.Add(prod.nombre);
                     break;
                 case "Pepsi":
                     listBox10.Items.Clear();
-                    foreach (string producto in productosPepsi)
-                        listBox10.Items.Add(producto);
+                    foreach (producto prod in productosPepsi)
+                        listBox10.Items.Add(prod.nombre);
                     break;
                 case "CocaCola":
                     listBox10.Items.Clear();
-                    foreach (string producto in productosCoca)
-                        listBox10.Items.Add(producto);
+                    foreach (producto prod in productosCoca)
+                        listBox10.Items.Add(prod.nombre);
                     break;
                 case "Sony":
                     listBox10.Items.Clear();
-                    foreach (string producto in productosSony)
-                        listBox10.Items.Add(producto);
+                    foreach (producto prod in productosSony)
+                        listBox10.Items.Add(prod.nombre);
                     break;
                 case "Microsoft":
                     listBox10.Items.Clear();
-                    foreach (string producto in productosMicrosoft)
-                        listBox10.Items.Add(producto);
+                    foreach (producto prod in productosMicrosoft)
+                        listBox10.Items.Add(prod.nombre);
                     break;
                 case "Nestle":
                     listBox10.Items.Clear();
-                    foreach (string producto in productosNestle)
-                        listBox10.Items.Add(producto);
+                    foreach (producto prod in productosNestle)
+                        listBox10.Items.Add(prod.nombre);
                     break;
                 case "PG":
                     listBox10.Items.Clear();
-                    foreach (string producto in productosPG)
-                        listBox10.Items.Add(producto);
+                    foreach (producto prod in productosPG)
+                        listBox10.Items.Add(prod.nombre);
                     break;
             }
             
 
         }
 
-        private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            //if (comboBox3.SelectedIndex == comboBox3.FindStringExact("Apple"))
-          
-        }
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -462,38 +324,38 @@ namespace _2022POOP1
             {
                 case "Apple":
                     listBox9.Items.Clear();
-                    foreach (string producto in productosApple)
-                        listBox9.Items.Add(producto);
+                    foreach (producto prod in productosApple)
+                        listBox9.Items.Add(prod.nombre);
                     break;
                 case "Pepsi":
                     listBox9.Items.Clear();
-                    foreach (string producto in productosPepsi)
-                        listBox9.Items.Add(producto);
+                    foreach (producto prod in productosPepsi)
+                        listBox9.Items.Add(prod.nombre);
                     break;
                 case "CocaCola":
                     listBox9.Items.Clear();
-                    foreach (string producto in productosCoca)
-                        listBox9.Items.Add(producto);
+                    foreach (producto prod in productosCoca)
+                        listBox9.Items.Add(prod.nombre);
                     break;
                 case "Sony":
                     listBox9.Items.Clear();
-                    foreach (string producto in productosSony)
-                        listBox9.Items.Add(producto);
+                    foreach (producto prod in productosSony)
+                        listBox9.Items.Add(prod.nombre);
                     break;
                 case "Microsoft":
                     listBox9.Items.Clear();
-                    foreach (string producto in productosMicrosoft)
-                        listBox9.Items.Add(producto);
+                    foreach (producto prod in productosMicrosoft)
+                        listBox9.Items.Add(prod.nombre);
                     break;
                 case "Nestle":
                     listBox9.Items.Clear();
-                    foreach (string producto in productosNestle)
-                        listBox9.Items.Add(producto);
+                    foreach (producto prod in productosNestle)
+                        listBox9.Items.Add(prod.nombre);
                     break;
                 case "PG":
                     listBox9.Items.Clear();
-                    foreach (string producto in productosPG)
-                        listBox9.Items.Add(producto);
+                    foreach (producto prod in productosPG)
+                        listBox9.Items.Add(prod.nombre);
                     break;
             }
         }
@@ -504,38 +366,38 @@ namespace _2022POOP1
             {
                 case "Apple":
                     listBox8.Items.Clear();
-                    foreach (string producto in productosApple)
-                        listBox8.Items.Add(producto);
+                    foreach (producto prod in productosApple)
+                        listBox8.Items.Add(prod.nombre);
                     break;
                 case "Pepsi":
                     listBox8.Items.Clear();
-                    foreach (string producto in productosPepsi)
-                        listBox8.Items.Add(producto);
+                    foreach (producto prod in productosPepsi)
+                        listBox8.Items.Add(prod.nombre);
                     break;
                 case "CocaCola":
                     listBox8.Items.Clear();
-                    foreach (string producto in productosCoca)
-                        listBox8.Items.Add(producto);
+                    foreach (producto prod in productosCoca)
+                        listBox8.Items.Add(prod.nombre);
                     break;
                 case "Sony":
                     listBox8.Items.Clear();
-                    foreach (string producto in productosSony)
-                        listBox8.Items.Add(producto);
+                    foreach (producto prod in productosSony)
+                        listBox8.Items.Add(prod.nombre);
                     break;
                 case "Microsoft":
                     listBox8.Items.Clear();
-                    foreach (string producto in productosMicrosoft)
-                        listBox8.Items.Add(producto);
+                    foreach (producto prod in productosMicrosoft)
+                        listBox8.Items.Add(prod.nombre);
                     break;
                 case "Nestle":
                     listBox8.Items.Clear();
-                    foreach (string producto in productosNestle)
-                        listBox8.Items.Add(producto);
+                    foreach (producto prod in productosNestle)
+                        listBox8.Items.Add(prod.nombre);
                     break;
                 case "PG":
                     listBox8.Items.Clear();
-                    foreach (string producto in productosPG)
-                        listBox8.Items.Add(producto);
+                    foreach (producto prod in productosPG)
+                        listBox8.Items.Add(prod.nombre);
                     break;
             }
         }
@@ -546,38 +408,38 @@ namespace _2022POOP1
             {
                 case "Apple":
                     listBox7.Items.Clear();
-                    foreach (string producto in productosApple)
-                        listBox7.Items.Add(producto);
+                    foreach (producto prod in productosApple)
+                        listBox7.Items.Add(prod.nombre);
                     break;
                 case "Pepsi":
                     listBox7.Items.Clear();
-                    foreach (string producto in productosPepsi)
-                        listBox7.Items.Add(producto);
+                    foreach (producto prod in productosPepsi)
+                        listBox7.Items.Add(prod.nombre);
                     break;
                 case "CocaCola":
                     listBox7.Items.Clear();
-                    foreach (string producto in productosCoca)
-                        listBox7.Items.Add(producto);
+                    foreach (producto prod in productosCoca)
+                        listBox7.Items.Add(prod.nombre);
                     break;
                 case "Sony":
                     listBox7.Items.Clear();
-                    foreach (string producto in productosSony)
-                        listBox7.Items.Add(producto);
+                    foreach (producto prod in productosSony)
+                        listBox7.Items.Add(prod.nombre);
                     break;
                 case "Microsoft":
                     listBox7.Items.Clear();
-                    foreach (string producto in productosMicrosoft)
-                        listBox7.Items.Add(producto);
+                    foreach (producto prod in productosMicrosoft)
+                        listBox7.Items.Add(prod.nombre);
                     break;
                 case "Nestle":
                     listBox7.Items.Clear();
-                    foreach (string producto in productosNestle)
-                        listBox7.Items.Add(producto);
+                    foreach (producto prod in productosNestle)
+                        listBox7.Items.Add(prod.nombre);
                     break;
                 case "PG":
                     listBox7.Items.Clear();
-                    foreach (string producto in productosPG)
-                        listBox7.Items.Add(producto);
+                    foreach (producto prod in productosPG)
+                        listBox7.Items.Add(prod.nombre);
                     break;
             }
         }
@@ -588,40 +450,107 @@ namespace _2022POOP1
             {
                 case "Apple":
                     listBox6.Items.Clear();
-                    foreach (string producto in productosApple)
-                        listBox6.Items.Add(producto);
+                    foreach (producto prod in productosApple)
+                        listBox6.Items.Add(prod.nombre);
                     break;
                 case "Pepsi":
                     listBox6.Items.Clear();
-                    foreach (string producto in productosPepsi)
-                        listBox6.Items.Add(producto);
+                    foreach (producto prod in productosPepsi)
+                        listBox6.Items.Add(prod.nombre);
                     break;
                 case "CocaCola":
                     listBox6.Items.Clear();
-                    foreach (string producto in productosCoca)
-                        listBox6.Items.Add(producto);
+                    foreach (producto prod in productosCoca)
+                        listBox6.Items.Add(prod.nombre);
                     break;
                 case "Sony":
                     listBox6.Items.Clear();
-                    foreach (string producto in productosSony)
-                        listBox6.Items.Add(producto);
+                    foreach (producto prod in productosSony)
+                        listBox6.Items.Add(prod.nombre);
                     break;
                 case "Microsoft":
                     listBox6.Items.Clear();
-                    foreach (string producto in productosMicrosoft)
-                        listBox6.Items.Add(producto);
+                    foreach (producto prod in productosMicrosoft)
+                        listBox6.Items.Add(prod.nombre);
                     break;
                 case "Nestle":
                     listBox6.Items.Clear();
-                    foreach (string producto in productosNestle)
-                        listBox6.Items.Add(producto);
+                    foreach (producto prod in productosNestle)
+                        listBox6.Items.Add(prod.nombre);
                     break;
                 case "PG":
                     listBox6.Items.Clear();
-                    foreach (string producto in productosPG)
-                        listBox6.Items.Add(producto);
+                    foreach (producto prod in productosPG)
+                        listBox6.Items.Add(prod.nombre);
                     break;
             }
         }
     }
+}
+
+public class fabricante
+{
+    public fabricante(float Factor_, string Nombre_, List<producto> Productos)
+    {
+        factor = Factor_;
+        nombre = Nombre_;
+        productos = Productos;
+    }
+
+    public List<producto> productos;
+    private float Factor;
+    public float factor
+    {
+        get
+        {
+            return Factor;
+        }
+        private set { Factor = value; }
+    }
+    private string Nombre;
+    public string nombre
+    {
+        get
+        {
+            return Nombre;
+        }
+        private set { Nombre = value; }
+    }
+
+    public float getEficiencia(string nombre)
+    {
+        foreach (producto prod in productos)
+            if (nombre == prod.nombre)
+                return prod.eficiencia;
+        return 0;
+    }
+}
+
+public class producto
+{
+    public producto(string Nombre, float Eficiencia)
+    {
+        eficiencia = Eficiencia;
+        nombre = Nombre;
+    }
+    private float Eficiencia;
+    public float eficiencia
+    {
+        get
+        {
+            return Eficiencia;
+        }
+        private set { Eficiencia = value; }
+    }
+
+    private string Nombre;
+    public string nombre
+    {
+        get
+        {
+            return Nombre;
+        }
+        private set { Nombre = value; }
+    }
+
 }
