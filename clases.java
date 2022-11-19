@@ -51,4 +51,13 @@ public class producto
     }
     private set {Eficiencia = value;}
   }
+  private string Nombre;
+  public string nombre
+  {
+    get
+    {
+      return Nombre;
+    }
+    private set {Nombre = value;}
+  }
 }
