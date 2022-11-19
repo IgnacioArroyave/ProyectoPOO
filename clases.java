@@ -16,6 +16,24 @@ public class fabricante
     }
     private set {Factor = value;}
   }
+  private string Nombre;
+  publilc string nombre 
+  {
+    get
+    {
+      return Nombre;
+    }
+    private set {Nombre = value;}
+  }
+  public float getEficiencia (string nombre)
+  {
+    foreach (producto prod in productos)
+    {
+      if (nombre == prod.nombre)
+        return prod.eficiencia;
+    }
+    return 0;
+  }
 }
 public class producto
 {
