@@ -267,7 +267,6 @@
             this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
             this.numericUpDown1.TabIndex = 20;
             this.numericUpDown1.Visible = false;
-
             // 
             // button4
             // 
@@ -281,7 +280,7 @@
             this.button4.Text = "limpiar";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Visible = false;
-
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -293,7 +292,6 @@
             this.button5.Text = "Calcular\r\n(compañia)";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Visible = false;
-
             // 
             // textBox13
             // 
@@ -340,7 +338,6 @@
             this.comboBox6.Size = new System.Drawing.Size(121, 24);
             this.comboBox6.TabIndex = 44;
             this.comboBox6.Visible = false;
-
             // 
             // comboBox7
             // 
@@ -478,7 +475,6 @@
             this.comboBox1.Sorted = true;
             this.comboBox1.TabIndex = 39;
             this.comboBox1.Visible = false;
-
             // 
             // comboBox2
             // 
@@ -658,9 +654,7 @@
             this.Controls.Add(this.comboBox6);
             this.Controls.Add(this.comboBox1);
             this.Name = "Form1";
-            this.Text = "Huellas de carbono";
-
-
+            this.Text = "proyecto";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();

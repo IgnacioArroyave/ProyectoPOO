@@ -1,19 +1,62 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
+using MySql.Data.MySqlClient;
 
 namespace _2022POOP1
 {
     public partial class Form1 : Form
     {
+        private void cargard()
+        {
+            string connstring = @"server=127.0.0.1;userid=localhost;password=;database=proyecto";
+
+            MySqlConnection conn = null;
+
+            try
+            {
+                conn = new MySqlConnection(connstring);
+                conn.Open();
+
+                string query = "SELECT * FROM fabricante;";
+                MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "fabricante");
+                DataTable fab = ds.Tables["fabricante"];
+
+                
+
+                foreach (DataRow row in fab.Rows)
+                {
+                    query = "SELECT * FROM producto where `marca` = " + row["id"] + ";";
+                    MySqlDataAdapter da1 = new MySqlDataAdapter(query, conn);
+                    DataSet ds1 = new DataSet();
+                    da1.Fill(ds1, "producto");
+                    DataTable prod = ds1.Tables["producto"];
+                    List<producto> prods = new List<producto>();
+                    foreach (DataRow prodrow in prod.Rows)
+                        prods.Add(new producto(prodrow["nombre"].ToString(), float.Parse(prodrow["efectividad"].ToString())));
+
+                    fabricantes.Add(new fabricante(float.Parse(row["factor"].ToString()), row["nombre"].ToString(), prods));
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: {0}", e.ToString());
+            }
+            finally
+            {
+                if (conn != null)
+                {
+                    conn.Close();
+                }
+            }
+        }
+
         public Form1()
         {
+            cargard();
             InitializeComponent();
 
 
@@ -23,53 +66,6 @@ namespace _2022POOP1
             listBox4.Items.Clear();
             listBox5.Items.Clear();
 
-            productosApple.Add(new producto("Iphone13", 2.8f));
-            productosApple.Add(new producto("Iphone12", 3.15f));
-            productosApple.Add(new producto ("Iphone11", 3.73f));
-            productosApple.Add(new producto ("Iphone10", 5.15f));
-            productosApple.Add(new producto ("Ipad", 6.67f));
-
-            productosPepsi.Add(new producto("Pepsi3L",0.0525f));
-            productosPepsi.Add(new producto("Pepsi2L",0.0350f));
-            productosPepsi.Add(new producto("Pepsi1.5L",0.0215f));
-
-            productosCoca.Add(new producto ("Cocacola3L", 0.0525f));
-            productosCoca.Add(new producto ("Cocacola2L", 0.0350f));
-            productosCoca.Add(new producto ("Cocacola1.5L", 0.0215f));
-
-
-            productosSony.Add(new producto("PS4", 1.22f));
-            productosSony.Add(new producto("PS5", 1.10f));
-            productosSony.Add(new producto("JUEGO PS4", 0.002f));
-            productosSony.Add(new producto("JUEGO PS5", 0.001f));
-            productosSony.Add(new producto("XM4", 0.92f));
-
-            productosMicrosoft.Add(new producto("XBOX1", 1.23f));           
-            productosMicrosoft.Add(new producto("Surface laptop1", 0.152f));
-            productosMicrosoft.Add(new producto("Surface laptop2", 0.130f));
-            productosMicrosoft.Add(new producto("XBOX series S", 1.05f));
-            productosMicrosoft.Add(new producto("XBOX series X", 1.12f));
-            productosMicrosoft.Add(new producto("Lumia650", 0.36f));
-            productosMicrosoft.Add(new producto("Lumia950", 0.52f));
-
-            productosNestle.Add(new producto("Milo 400g",0.0125f));
-            productosNestle.Add(new producto("Milo 800g", 0.0225f));
-            productosNestle.Add(new producto("Barra Crunch 90g",0.0098f));
-            productosNestle.Add(new producto("Barra Crunch 150g",0.0105f));
-            productosNestle.Add(new producto("Cerelac 400g",0.0132f));
-            productosNestle.Add(new producto("Cerelac 800g",0.0224f));
-            productosNestle.Add(new producto("Nescafe 200g", 0.0085f));
-            productosNestle.Add(new producto("Nescafe 400g",0.0170f));
-
-            productosPG.Add(new producto("Pantene 500g",0.0175f));
-            productosPG.Add(new producto("Pantene 250g", 0.0110f));
-            productosPG.Add(new producto("Tidepods 500g",0.0132f));
-            productosPG.Add(new producto("OralB 200g",0.0078f));
-            productosPG.Add(new producto("OralB 50g",0.0035f));
-            productosPG.Add(new producto("Losion Lacoste 500mg",0.0116f));
-            productosPG.Add(new producto("Losion Lacoste 250mg",0.0089f));
-            productosPG.Add(new producto("Vicks vaporub 50ml",0.0025f));
-            productosPG.Add(new producto("Vicks vaporub 100ml",0.0075f));
             //
             faber.Add(listBox1);
             faber.Add(listBox2);
@@ -83,13 +79,6 @@ namespace _2022POOP1
             remolino.Add(listBox7);
             remolino.Add(listBox6);
 
-            fabricantes.Add(new fabricante(22.5f, "Apple", productosApple));
-            fabricantes.Add(new fabricante(13.8f, "Microsoft", productosMicrosoft));
-            fabricantes.Add(new fabricante(113.5f, "Nestle", productosNestle));
-            fabricantes.Add(new fabricante(18.47f, "Sony", productosSony));
-            fabricantes.Add(new fabricante(2.4f, "PG", productosPG));
-            fabricantes.Add(new fabricante(63.1f, "Pepsi", productosPepsi));
-            fabricantes.Add(new fabricante(5.17f, "CocaCola", productosCoca));
 
             foreach (fabricante marca in fabricantes)
             {
@@ -101,13 +90,6 @@ namespace _2022POOP1
             }
         }
         List<fabricante> fabricantes = new List<fabricante>();
-        List<producto> productosApple = new List<producto>();
-        List<producto> productosPepsi = new List<producto>();
-        List<producto> productosCoca = new List<producto>();
-        List<producto> productosSony = new List<producto>();
-        List<producto> productosMicrosoft = new List<producto>();
-        List<producto> productosNestle = new List<producto>();
-        List<producto> productosPG = new List<producto>();
         List<ListBox> faber = new List<ListBox>();
         List<ListBox> remolino = new List<ListBox>();
 
@@ -269,221 +251,116 @@ namespace _2022POOP1
 
                 total += factor * eficiencia;
             }
-            MessageBox.Show("su huella de carbono es:" + "\n" + total+"T/CO2");
+            MessageBox.Show("su huella de carbono es:" + "\n" + total+"Kg/CO2");
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             //string item =listBox1.Items[listBox1.SelectedIndex].ToString();
-            switch (listBox1.Items[listBox1.SelectedIndex])
-            {
-                case "Apple":
-                    listBox10.Items.Clear();
-                    foreach (producto prod in productosApple)
-                        listBox10.Items.Add(prod.nombre);
-                    break;
-                case "Pepsi":
-                    listBox10.Items.Clear();
-                    foreach (producto prod in productosPepsi)
-                        listBox10.Items.Add(prod.nombre);
-                    break;
-                case "CocaCola":
-                    listBox10.Items.Clear();
-                    foreach (producto prod in productosCoca)
-                        listBox10.Items.Add(prod.nombre);
-                    break;
-                case "Sony":
-                    listBox10.Items.Clear();
-                    foreach (producto prod in productosSony)
-                        listBox10.Items.Add(prod.nombre);
-                    break;
-                case "Microsoft":
-                    listBox10.Items.Clear();
-                    foreach (producto prod in productosMicrosoft)
-                        listBox10.Items.Add(prod.nombre);
-                    break;
-                case "Nestle":
-                    listBox10.Items.Clear();
-                    foreach (producto prod in productosNestle)
-                        listBox10.Items.Add(prod.nombre);
-                    break;
-                case "PG":
-                    listBox10.Items.Clear();
-                    foreach (producto prod in productosPG)
-                        listBox10.Items.Add(prod.nombre);
-                    break;
-            }
-            
+            ListBox myListBox = listBox10;
+            string nombreFab = listBox1.Items[listBox1.SelectedIndex].ToString();
+
+            //valor default
+            fabricante myFaber = new fabricante(0, "Fabricante no encontrado", new List<producto>());
+
+            //busca el fabricante por nombre
+            foreach (fabricante fab in fabricantes)
+                if (fab.nombre == nombreFab)
+                    myFaber = fab;
+
+
+            myListBox.Items.Clear();
+            foreach (producto prod in myFaber.productos)
+                myListBox.Items.Add(prod.nombre);
+           
 
         }
 
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (listBox2.Items[listBox2.SelectedIndex])
-            {
-                case "Apple":
-                    listBox9.Items.Clear();
-                    foreach (producto prod in productosApple)
-                        listBox9.Items.Add(prod.nombre);
-                    break;
-                case "Pepsi":
-                    listBox9.Items.Clear();
-                    foreach (producto prod in productosPepsi)
-                        listBox9.Items.Add(prod.nombre);
-                    break;
-                case "CocaCola":
-                    listBox9.Items.Clear();
-                    foreach (producto prod in productosCoca)
-                        listBox9.Items.Add(prod.nombre);
-                    break;
-                case "Sony":
-                    listBox9.Items.Clear();
-                    foreach (producto prod in productosSony)
-                        listBox9.Items.Add(prod.nombre);
-                    break;
-                case "Microsoft":
-                    listBox9.Items.Clear();
-                    foreach (producto prod in productosMicrosoft)
-                        listBox9.Items.Add(prod.nombre);
-                    break;
-                case "Nestle":
-                    listBox9.Items.Clear();
-                    foreach (producto prod in productosNestle)
-                        listBox9.Items.Add(prod.nombre);
-                    break;
-                case "PG":
-                    listBox9.Items.Clear();
-                    foreach (producto prod in productosPG)
-                        listBox9.Items.Add(prod.nombre);
-                    break;
-            }
+            ListBox myListBox = listBox9;
+            string nombreFab = listBox2.Items[listBox2.SelectedIndex].ToString();
+
+            //valor default
+            fabricante myFaber = new fabricante(0, "Fabricante no encontrado", new List<producto>());
+
+            //busca el fabricante por nombre
+            foreach (fabricante fab in fabricantes)
+                if (fab.nombre == nombreFab)
+                    myFaber = fab;
+
+
+            myListBox.Items.Clear();
+            foreach (producto prod in myFaber.productos)
+                myListBox.Items.Add(prod.nombre);
         }
 
         private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (listBox3.Items[listBox3.SelectedIndex])
-            {
-                case "Apple":
-                    listBox8.Items.Clear();
-                    foreach (producto prod in productosApple)
-                        listBox8.Items.Add(prod.nombre);
-                    break;
-                case "Pepsi":
-                    listBox8.Items.Clear();
-                    foreach (producto prod in productosPepsi)
-                        listBox8.Items.Add(prod.nombre);
-                    break;
-                case "CocaCola":
-                    listBox8.Items.Clear();
-                    foreach (producto prod in productosCoca)
-                        listBox8.Items.Add(prod.nombre);
-                    break;
-                case "Sony":
-                    listBox8.Items.Clear();
-                    foreach (producto prod in productosSony)
-                        listBox8.Items.Add(prod.nombre);
-                    break;
-                case "Microsoft":
-                    listBox8.Items.Clear();
-                    foreach (producto prod in productosMicrosoft)
-                        listBox8.Items.Add(prod.nombre);
-                    break;
-                case "Nestle":
-                    listBox8.Items.Clear();
-                    foreach (producto prod in productosNestle)
-                        listBox8.Items.Add(prod.nombre);
-                    break;
-                case "PG":
-                    listBox8.Items.Clear();
-                    foreach (producto prod in productosPG)
-                        listBox8.Items.Add(prod.nombre);
-                    break;
-            }
+            ListBox myListBox = listBox8;
+            string nombreFab = listBox3.Items[listBox3.SelectedIndex].ToString();
+
+            //valor default
+            fabricante myFaber = new fabricante(0, "Fabricante no encontrado", new List<producto>());
+
+            //busca el fabricante por nombre
+            foreach (fabricante fab in fabricantes)
+                if (fab.nombre == nombreFab)
+                    myFaber = fab;
+
+
+            myListBox.Items.Clear();
+            foreach (producto prod in myFaber.productos)
+                myListBox.Items.Add(prod.nombre);
+          
         }
 
         private void listBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (listBox4.Items[listBox4.SelectedIndex])
-            {
-                case "Apple":
-                    listBox7.Items.Clear();
-                    foreach (producto prod in productosApple)
-                        listBox7.Items.Add(prod.nombre);
-                    break;
-                case "Pepsi":
-                    listBox7.Items.Clear();
-                    foreach (producto prod in productosPepsi)
-                        listBox7.Items.Add(prod.nombre);
-                    break;
-                case "CocaCola":
-                    listBox7.Items.Clear();
-                    foreach (producto prod in productosCoca)
-                        listBox7.Items.Add(prod.nombre);
-                    break;
-                case "Sony":
-                    listBox7.Items.Clear();
-                    foreach (producto prod in productosSony)
-                        listBox7.Items.Add(prod.nombre);
-                    break;
-                case "Microsoft":
-                    listBox7.Items.Clear();
-                    foreach (producto prod in productosMicrosoft)
-                        listBox7.Items.Add(prod.nombre);
-                    break;
-                case "Nestle":
-                    listBox7.Items.Clear();
-                    foreach (producto prod in productosNestle)
-                        listBox7.Items.Add(prod.nombre);
-                    break;
-                case "PG":
-                    listBox7.Items.Clear();
-                    foreach (producto prod in productosPG)
-                        listBox7.Items.Add(prod.nombre);
-                    break;
-            }
+            ListBox myListBox = listBox7;
+            string nombreFab = listBox4.Items[listBox4.SelectedIndex].ToString();
+
+            //valor default
+            fabricante myFaber = new fabricante(0, "Fabricante no encontrado", new List<producto>());
+
+            //busca el fabricante por nombre
+            foreach (fabricante fab in fabricantes)
+                if (fab.nombre == nombreFab)
+                    myFaber = fab;
+
+
+            myListBox.Items.Clear();
+            foreach (producto prod in myFaber.productos)
+                myListBox.Items.Add(prod.nombre);
+           
         }
 
         private void listBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (listBox5.Items[listBox5.SelectedIndex])
-            {
-                case "Apple":
-                    listBox6.Items.Clear();
-                    foreach (producto prod in productosApple)
-                        listBox6.Items.Add(prod.nombre);
-                    break;
-                case "Pepsi":
-                    listBox6.Items.Clear();
-                    foreach (producto prod in productosPepsi)
-                        listBox6.Items.Add(prod.nombre);
-                    break;
-                case "CocaCola":
-                    listBox6.Items.Clear();
-                    foreach (producto prod in productosCoca)
-                        listBox6.Items.Add(prod.nombre);
-                    break;
-                case "Sony":
-                    listBox6.Items.Clear();
-                    foreach (producto prod in productosSony)
-                        listBox6.Items.Add(prod.nombre);
-                    break;
-                case "Microsoft":
-                    listBox6.Items.Clear();
-                    foreach (producto prod in productosMicrosoft)
-                        listBox6.Items.Add(prod.nombre);
-                    break;
-                case "Nestle":
-                    listBox6.Items.Clear();
-                    foreach (producto prod in productosNestle)
-                        listBox6.Items.Add(prod.nombre);
-                    break;
-                case "PG":
-                    listBox6.Items.Clear();
-                    foreach (producto prod in productosPG)
-                        listBox6.Items.Add(prod.nombre);
-                    break;
-            }
+            ListBox myListBox = listBox6;
+            string nombreFab = listBox5.Items[listBox5.SelectedIndex].ToString();
+
+            //valor default
+            fabricante myFaber = new fabricante(0, "Fabricante no encontrado", new List<producto>());
+
+            //busca el fabricante por nombre
+            foreach (fabricante fab in fabricantes)
+                if (fab.nombre == nombreFab)
+                    myFaber = fab;
+
+
+            myListBox.Items.Clear();
+            foreach (producto prod in myFaber.productos)
+                myListBox.Items.Add(prod.nombre);
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form1 formita = new Form1();
+            formita.Show();
+            this.Dispose(false);
         }
     }
 }
