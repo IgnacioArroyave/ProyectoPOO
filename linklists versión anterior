@@ -206,6 +206,11 @@ private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
                     foreach (producto prod in productosNestle)
                         listBox6.Items.Add(prod.nombre);
                     break;
+                    case "samsung":
+                    listBox6.Items.Clear();
+                    foreach (producto prod in productosamsung)
+                        listBox6.Items.Add(prod.nombre);
+                    break;
                 case "PG":
                     listBox6.Items.Clear();
                     foreach (producto prod in productosPG)
