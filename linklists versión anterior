@@ -1,0 +1,214 @@
+
+ 
+private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //string item =listBox1.Items[listBox1.SelectedIndex].ToString();
+            switch (listBox1.Items[listBox1.SelectedIndex])
+            {
+                case "Apple":
+                    listBox10.Items.Clear();
+                    foreach (producto prod in productosApple)
+                        listBox10.Items.Add(prod.nombre);
+                    break;
+                case "Pepsi":
+                    listBox10.Items.Clear();
+                    foreach (producto prod in productosPepsi)
+                        listBox10.Items.Add(prod.nombre);
+                    break;
+                case "CocaCola":
+                    listBox10.Items.Clear();
+                    foreach (producto prod in productosCoca)
+                        listBox10.Items.Add(prod.nombre);
+                    break;
+                case "Sony":
+                    listBox10.Items.Clear();
+                    foreach (producto prod in productosSony)
+                        listBox10.Items.Add(prod.nombre);
+                    break;
+                case "Microsoft":
+                    listBox10.Items.Clear();
+                    foreach (producto prod in productosMicrosoft)
+                        listBox10.Items.Add(prod.nombre);
+                    break;
+                case "Nestle":
+                    listBox10.Items.Clear();
+                    foreach (producto prod in productosNestle)
+                        listBox10.Items.Add(prod.nombre);
+                    break;
+                case "PG":
+                    listBox10.Items.Clear();
+                    foreach (producto prod in productosPG)
+                        listBox10.Items.Add(prod.nombre);
+                    break;
+            }
+            
+
+        }
+
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (listBox2.Items[listBox2.SelectedIndex])
+            {
+                case "Apple":
+                    listBox9.Items.Clear();
+                    foreach (producto prod in productosApple)
+                        listBox9.Items.Add(prod.nombre);
+                    break;
+                case "Pepsi":
+                    listBox9.Items.Clear();
+                    foreach (producto prod in productosPepsi)
+                        listBox9.Items.Add(prod.nombre);
+                    break;
+                case "CocaCola":
+                    listBox9.Items.Clear();
+                    foreach (producto prod in productosCoca)
+                        listBox9.Items.Add(prod.nombre);
+                    break;
+                case "Sony":
+                    listBox9.Items.Clear();
+                    foreach (producto prod in productosSony)
+                        listBox9.Items.Add(prod.nombre);
+                    break;
+                case "Microsoft":
+                    listBox9.Items.Clear();
+                    foreach (producto prod in productosMicrosoft)
+                        listBox9.Items.Add(prod.nombre);
+                    break;
+                case "Nestle":
+                    listBox9.Items.Clear();
+                    foreach (producto prod in productosNestle)
+                        listBox9.Items.Add(prod.nombre);
+                    break;
+                case "PG":
+                    listBox9.Items.Clear();
+                    foreach (producto prod in productosPG)
+                        listBox9.Items.Add(prod.nombre);
+                    break;
+            }
+        }
+
+        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (listBox3.Items[listBox3.SelectedIndex])
+            {
+                case "Apple":
+                    listBox8.Items.Clear();
+                    foreach (producto prod in productosApple)
+                        listBox8.Items.Add(prod.nombre);
+                    break;
+                case "Pepsi":
+                    listBox8.Items.Clear();
+                    foreach (producto prod in productosPepsi)
+                        listBox8.Items.Add(prod.nombre);
+                    break;
+                case "CocaCola":
+                    listBox8.Items.Clear();
+                    foreach (producto prod in productosCoca)
+                        listBox8.Items.Add(prod.nombre);
+                    break;
+                case "Sony":
+                    listBox8.Items.Clear();
+                    foreach (producto prod in productosSony)
+                        listBox8.Items.Add(prod.nombre);
+                    break;
+                case "Microsoft":
+                    listBox8.Items.Clear();
+                    foreach (producto prod in productosMicrosoft)
+                        listBox8.Items.Add(prod.nombre);
+                    break;
+                case "Nestle":
+                    listBox8.Items.Clear();
+                    foreach (producto prod in productosNestle)
+                        listBox8.Items.Add(prod.nombre);
+                    break;
+                case "PG":
+                    listBox8.Items.Clear();
+                    foreach (producto prod in productosPG)
+                        listBox8.Items.Add(prod.nombre);
+                    break;
+            }
+        }
+
+        private void listBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (listBox4.Items[listBox4.SelectedIndex])
+            {
+                case "Apple":
+                    listBox7.Items.Clear();
+                    foreach (producto prod in productosApple)
+                        listBox7.Items.Add(prod.nombre);
+                    break;
+                case "Pepsi":
+                    listBox7.Items.Clear();
+                    foreach (producto prod in productosPepsi)
+                        listBox7.Items.Add(prod.nombre);
+                    break;
+                case "CocaCola":
+                    listBox7.Items.Clear();
+                    foreach (producto prod in productosCoca)
+                        listBox7.Items.Add(prod.nombre);
+                    break;
+                case "Sony":
+                    listBox7.Items.Clear();
+                    foreach (producto prod in productosSony)
+                        listBox7.Items.Add(prod.nombre);
+                    break;
+                case "Microsoft":
+                    listBox7.Items.Clear();
+                    foreach (producto prod in productosMicrosoft)
+                        listBox7.Items.Add(prod.nombre);
+                    break;
+                case "Nestle":
+                    listBox7.Items.Clear();
+                    foreach (producto prod in productosNestle)
+                        listBox7.Items.Add(prod.nombre);
+                    break;
+                case "PG":
+                    listBox7.Items.Clear();
+                    foreach (producto prod in productosPG)
+                        listBox7.Items.Add(prod.nombre);
+                    break;
+            }
+        }
+
+        private void listBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (listBox5.Items[listBox5.SelectedIndex])
+            {
+                case "Apple":
+                    listBox6.Items.Clear();
+                    foreach (producto prod in productosApple)
+                        listBox6.Items.Add(prod.nombre);
+                    break;
+                case "Pepsi":
+                    listBox6.Items.Clear();
+                    foreach (producto prod in productosPepsi)
+                        listBox6.Items.Add(prod.nombre);
+                    break;
+                case "CocaCola":
+                    listBox6.Items.Clear();
+                    foreach (producto prod in productosCoca)
+                        listBox6.Items.Add(prod.nombre);
+                    break;
+                case "Sony":
+                    listBox6.Items.Clear();
+                    foreach (producto prod in productosSony)
+                        listBox6.Items.Add(prod.nombre);
+                    break;
+                case "Microsoft":
+                    listBox6.Items.Clear();
+                    foreach (producto prod in productosMicrosoft)
+                        listBox6.Items.Add(prod.nombre);
+                    break;
+                case "Nestle":
+                    listBox6.Items.Clear();
+                    foreach (producto prod in productosNestle)
+                        listBox6.Items.Add(prod.nombre);
+                    break;
+                case "PG":
+                    listBox6.Items.Clear();
+                    foreach (producto prod in productosPG)
+                        listBox6.Items.Add(prod.nombre);
+                    break;
+            }
