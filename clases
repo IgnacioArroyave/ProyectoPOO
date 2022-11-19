@@ -1,0 +1,17 @@
+public class fabricante
+{
+  public fabricante (float Factor_, string Nombre_, List<producto> Productos)
+  {
+    factor = Factor_;
+    nombre = Nombre_;
+    productos = Productos_;
+  }
+}
+public class producto
+{
+  public producto (string Nombre, float Eficiencia)
+  {
+    eficineca = Eficiencia:
+    nombre = Nombre;
+  }
+}
